@@ -120,3 +120,147 @@ User (Student / Beginner Cook)
 
 **Special Requirements:**  
 - Budget constraints should be applied automatically when generating recipe recommendations and grocery lists.
+
+
+
+# Jenny Ibrahim Use Cases
+
+- UC-05 create, edit, and organize recipes with Metadata
+- UC-06 view recipe with steps, timers, nutritional info, and media
+- UC-07 share recipes via generated links
+- UC-08 convert units and standardize measurements across recipes
+- 
+----------------------------------------------------------------------------------------
+
+## UC-05 create, edit, and organize recipes with Metadata
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+- User: wants to create and organize personal recipes with relevant metadata such as ingredients, equipment, and tags for easy retrieval.
+- System: must store structured recipe data consistently and make it
+  accessible for filtering and recommendations.
+
+**Preconditions:**
+- User has an existing profile and is logged into the system.
+- The system is running and able to store recipe data.
+
+**Main success scenarios:**
+1. User opens the recipe creation page
+2. System presents a structured form for entering recipe details
+3. User enters the recipe name, ingredients, required equipment, and relevant tags
+4. User submits the recipe
+5. System validates the input for completeness and structure
+6. System saves the recipe and associates it with the users profile
+7. System confirms the recipe has been created
+
+**Extension:**
+5a. User submits incomplete or improperly formatted recipe data.
+  - system highlights missing fields and prompts the user to correct them
+3a. User wants to edit an existing recipe
+  - system retrieves the stored recipe and allows the user to modify any field, then re-validates and saves the updated version.
+
+**Special Requirements:**
+Recipe metadata (ingredients, equipment, tags) must be stored in a structured format to support consistent filtering and search.
+
+----------------------------------------------------------------------------------------
+
+## UC-06 view recipe with steps, timers, nutritional info, and media
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+- User: wants a clear, guided view of a recipe including step-by-step instructions, timers, nutritional information, and any associated media
+- System: must present recipe content in a unified, readable, and interactive format
+
+**Preconditions:**
+- The recipe exists in the system
+- User has access to the recipe viewing page
+  
+**Main success scenarios:**
+1. User selects a recipe to view
+2. System retrieves and displays the full recipe in a unified viewing module.
+3. System presents step-by-step cooking instructions in sequential order.
+4. System displays associated timers for relevant steps.
+5. System shows nutritional information for the recipe.
+6. System displays any associated media (e.g., photos or instructional images).
+
+**Extension:**
+4a. User activates a timer for a specific step.
+  - System starts a countdown and notifies the user when the time has elapsed.
+5a. Nutritional information is unavailable for the recipe.
+  - System indicates that nutritional data is not available for that recipe.
+
+**Special Requirements:**
+The viewing module must present all recipe components (steps, timers, nutrition, media) in a consistent and organized layout.
+
+----------------------------------------------------------------------------------------
+## UC-07 share recipes via generated links
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+- User: wants to share a recipe with others outside the application using a simple shareable link.
+- System: must generate a stable, accessible link that allows external users to view the recipe without requiring an account.
+
+**Preconditions:**
+- The recipe exists in the system and belongs to the user's profile.
+- User is logged into the system.
+
+**Main success scenarios:**
+1. User opens a recipe they own.
+2. User selects the share option.
+3. System generates a unique shareable link for the recipe.
+4. System displays the link to the user for copying and external distribution.
+5. User copies and shares the link externally.
+6. External recipient opens the link and views the recipe in a read-only format.
+
+**Extension:**
+3a. The system fails to generate a link.
+  - System notifies the user and prompts them to try again.
+6a. The recipe has been deleted or made private after the link was generated.
+  - System informs the external recipient that the recipe is no longer available.
+
+**Special Requirements:**
+Generated links must remain valid and point to consistent recipe data as long as the recipe exists in the system.
+
+----------------------------------------------------------------------------------------
+## UC-08 convert units and standardize measurements across recipes
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+- User: wants ingredient measurements presented in a familiar or preferred unit system without manual conversion.
+- System: must apply accurate unit conversions consistently across all recipe content.
+
+**Preconditions:**
+- The recipe contains ingredient measurements.
+- The system has a unit conversion reference available.
+
+**Main success scenarios:**
+1. User opens a recipe containing ingredient measurements.
+2. System detects the units used in the recipe.
+3. User selects a preferred unit system (e.g., metric or imperial).
+4. System converts all measurements in the recipe to the selected unit system.
+5. System displays the updated measurements consistently throughout the recipe.
+
+**Extension:**
+4a. A measurement cannot be accurately converted (e.g., ambiguous unit).
+   - System flags the measurement and displays the original value with a note.
+
+3a. User does not select a unit preference.
+  - System defaults to the unit system stored in the user's profile, or displays the recipe's original units if no preference is set.
+  - 
+**Special Requirements:**
+Unit conversions must be accurate and applied uniformly across all ingredients and steps within a recipe, consistent with the non-functional requirement for data consistency and structured organization.
+
+----------------------------------------------------------------------------------------
+
+
+
+
+

@@ -1,3 +1,7 @@
+
+
+###Ignore the .gitkeep in each folder just used that to track the folders initially.####
+
 # SE UML Project
 
 This repository is used to collaborate on the Software Engineering UML assignment.

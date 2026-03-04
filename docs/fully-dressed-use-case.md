@@ -92,3 +92,31 @@ User (Student / Beginner Cook)
 
 **Special Requirements:**  
 - Filtering results should be fast and responsive (consistent with performance requirements).
+
+## UC-04 Configure Cooking Budget Constraints(kaleab)
+
+**Primary Actor:**  
+User (Student / Beginner Cook)
+
+**Stakeholders and Interests:**  
+- User: wants recipes that stay within a specified ingredient budget.
+- System: must apply the user’s budget constraints when filtering and recommending recipes.
+
+**Preconditions:**  
+- User has an existing profile.
+- Recipe ingredient price estimates are available in the system.
+
+**Main Success Scenario:**
+1. User opens the budget settings section in their profile.
+2. System prompts the user to enter a preferred ingredient budget limit.
+3. User enters the desired budget amount.
+4. System validates the input.
+5. System saves the budget constraint to the user profile.
+6. System applies the budget constraint when filtering recipes.
+
+**Extensions:**
+- 4a. User enters an invalid or negative budget value.  
+  - System prompts the user to correct the input before saving.
+
+**Special Requirements:**  
+- Budget constraints should be applied automatically when generating recipe recommendations and grocery lists.

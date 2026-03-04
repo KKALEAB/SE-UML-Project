@@ -13,7 +13,7 @@
 User (Student / Beginner Cook)
 
 **Stakeholders and Interests:**  
-- User: wants recipes tailored to dietary needs, allergies, and budget constraints  
+- User: wants recipes tailored to dietary needs, allergies, and budget constraints.  
 - System: must store and apply preferences consistently when recommending recipes
 
 **Preconditions:**  

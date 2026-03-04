@@ -34,3 +34,31 @@ User (Student / Beginner Cook)
 
 **Special Requirements:**  
 - Profile data must be securely stored and retrievable during recipe filtering.
+
+## UC-02 Manage Kitchen Equipment (kaleab)
+
+**Primary Actor:**  
+User (Student / Beginner Cook)
+
+**Stakeholders and Interests:**  
+- User: wants recipes that match the tools they actually have available  
+- System: must accurately track available kitchen equipment to filter recipes
+
+**Preconditions:**  
+- User has an existing profile  
+- User is logged into the system
+
+**Main Success Scenario:**
+1. User opens the kitchen equipment management section.
+2. System displays a list of common kitchen tools.
+3. User selects the tools they have available (e.g., stove, oven, pan, blender).
+4. User saves the equipment list.
+5. System stores the selected equipment in the user profile.
+6. System uses the stored equipment to filter compatible recipes.
+
+**Extensions:**
+- 3a. User adds a custom tool not listed.  
+  - System allows manual entry of additional equipment.
+
+**Special Requirements:**  
+- Equipment data should be stored and used during recipe recommendation and filtering.

@@ -62,3 +62,33 @@ User (Student / Beginner Cook)
 
 **Special Requirements:**  
 - Equipment data should be stored and used during recipe recommendation and filtering.
+
+
+## UC-03 Apply Personalized Recipe Filters (kaleab)
+
+**Primary Actor:**  
+User (Student / Beginner Cook)
+
+**Stakeholders and Interests:**  
+- User: wants recipes that match their dietary preferences, allergies, available equipment, and budget.
+- System: must filter recipes accurately using the user’s stored profile information.
+
+**Preconditions:**  
+- User has an existing profile with preferences and equipment stored.
+- The recipe database is available.
+
+**Main Success Scenario:**
+1. User opens the recipe search page.
+2. System retrieves the user's stored preferences (dietary restrictions, allergens, equipment, and budget).
+3. User initiates a recipe search.
+4. System filters recipes based on the user’s stored profile constraints.
+5. System displays the filtered recipe results to the user.
+
+**Extensions:**
+- 2a. User has no preferences stored.  
+  - System displays recipes without applying filters.
+- 4a. No recipes match the filters.  
+  - System informs the user and suggests relaxing some constraints.
+
+**Special Requirements:**  
+- Filtering results should be fast and responsive (consistent with performance requirements).

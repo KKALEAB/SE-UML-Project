@@ -517,3 +517,153 @@ System: must store historical cooking activity.
 Cooking history data must be associated only with the authenticated user account.
 
 ----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+## UC-17 Search Recipes by Keywords (Ishita)
+
+
+**Primary actor:**
+User (student/beginner cook)
+
+
+**Stakeholders and interests:**
+-User: wants to quickly find recipes by typing words like an ingredient, dish name, or cuisine.
+-System: must return accurate and relevant recipe results based on what the user typed.
+
+
+**Preconditions:**
+-The user has access to the application.
+-The recipe database has recipes stored in it.
+
+
+**Main success scenarios:**
+1. User opens the recipe search page.
+2. User types one or more keywords into the search bar (e.g., "pasta", "chicken soup").
+3. System searches the recipe database for matches based on the keywords.
+4. System displays a list of matching recipes to the user.
+5. User selects a recipe from the results to view it.
+**Extension:**
+No recipes match the keywords.
+      - System shows a message saying no results were found and  suggests trying different keywords.
+2a. User submits an empty search.
+     - System prompts the user to enter at least one keyword before searching.
+
+
+**Special Requirements:**
+Search results should appear quickly, within 200ms of the user submitting the query.
+
+
+----------------------------------------------------------------------------------------
+## UC-18 Apply Unified Recipe Filters (Ishita)
+
+
+**Primary actor:**
+User (student/beginner cook)
+
+
+**Stakeholders and interests:**
+- User: wants to narrow down recipe results using filters like available equipment, budget, dietary restrictions, and allergens.
+- System: must apply all selected filters together and return only recipes that match every condition.
+
+
+**Preconditions:**
+- The user has access to the recipe search page.
+- The recipe database is available.
+
+
+**Main success scenarios:**
+1. User opens the recipe search or filter page.
+2. User selects one or more filters (e.g., no oven, budget under $10, gluten free, no nuts).
+3. System applies all selected filters to the recipe database.
+4. System displays only the recipes that pass all the chosen filters.
+5. User browses the filtered results.
+
+
+**Extension:**
+4a. No recipes match all the selected filters.
+System notifies the user and suggests removing one or more filters to see more results.
+
+
+2a. User does not select any filters.
+System displays all available recipes without filtering.
+**Special Requirements:**
+Filtered results should load within 200ms. All filters must work together at the same time, not one at a time.
+----------------------------------------------------------------------------------------
+## UC-19 Save and Manage Favorite Recipes (Ishita)
+
+
+**Primary actor:**
+User (student/beginner cook)
+
+
+**Stakeholders and interests:**
+User: wants to save recipes they like so they can find them again easily later.
+System: must store the user's saved recipes and link them to their account.
+
+
+**Preconditions:**
+The user is logged into their account.
+The recipe the user wants to save exists in the system.
+
+
+**Main success scenarios:**
+1. User opens a recipe they want to save.
+2. User clicks the bookmark or favorite button on the recipe.
+3. System saves the recipe to the user's favorites list.
+4. System confirms the recipe has been saved (e.g., the bookmark icon changes).
+5. User can go to their favorites section to view all saved recipes.
+6. User can remove a recipe from their favorites by clicking the bookmark button again.
+
+
+**Extension:**
+3a. The recipe is already in the user's favorites.
+System removes it from favorites (acts as a toggle).
+
+
+5a. The user has no saved favorites yet.
+System shows a message saying the favorites list is empty and suggests browsing recipes.
+
+
+**Special Requirements:** Saved recipes must stay linked to the user's account and be accessible after logging out and back in.
+
+
+----------------------------------------------------------------------------------------
+## UC-20 View Ranked Search Results (Ishita)
+
+
+**Primary actor:**
+User (student/beginner cook)
+
+
+**Stakeholders and interests:**
+User: wants the most relevant and useful recipes to appear at the top of search results.
+System: must rank recipes based on how well they match the user's search and profile.
+
+
+**Preconditions:**
+- The user has performed a recipe search.
+- There are matching results available to display.
+
+
+**Main success scenarios:**
+1. User submits a recipe search (with or without filters).
+2. System retrieves all matching recipes from the database.
+3. System ranks the results based on factors like keyword match, user preferences, and ratings.
+4. System displays the ranked list with the most relevant recipes at the top.
+5. User scrolls through the results and selects a recipe.
+
+
+**Extension:**
+3a. All results have the same relevance score.
+System falls back to sorting by recipe rating or most recently added.
+
+
+2a. No results are found.
+System displays a message and suggests adjusting the search or filters.
+
+
+**Special Requirements:**
+The ranking logic should factor in the user's stored preferences and dietary profile when available.
+
+
+----------------------------------------------------------------------------------------
+

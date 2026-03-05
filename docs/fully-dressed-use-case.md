@@ -382,3 +382,138 @@ System: Present an interactable space for the User to navigate within
 **Special Requirements:**
 
 ----------------------------------------------------------------------------------------
+
+## UC-13 Estimate Recipe Cost (Vanshika)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: wants step-by-step cooking instructions adjusted to their skill level.
+System: must adapt instruction complexity dynamically.
+
+**Preconditions:**
+- User is logged in.
+- User skill level is stored in the profile.
+- The recipe exists.
+
+**Main success scenarios:**
+1. User opens a recipe.
+2. User selects “Start Guided Cooking.”
+3. System retrieves the user’s stored skill level.
+4. System adjusts instruction detail accordingly:
+  Beginner: includes detailed explanations and tips.
+  Intermediate: includes moderate explanation.
+  Advanced: concise instructions.
+5. System displays the first step.
+6. User confirms completion of each step.
+7. System advances sequentially until recipe completion.
+8. System marks recipe as completed in cooking history.
+
+**Extension:**
+3a. No skill level stored.
+    - System defaults to beginner mode.
+resumption
+6a. User pauses the session.
+    - System saves progress for later .
+
+**Special Requirements:**
+Instruction adjustments must occur instantly without noticeable delay.
+
+----------------------------------------------------------------------------------------
+
+## UC-14 Scale Recipe Serving Size (Vanshika)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: wants ingredient quantities recalculated automatically.
+System: must ensure accurate proportional scaling.
+
+**Preconditions:**
+- Recipe includes ingredient quantities.
+- Recipe includes default serving size.
+
+**Main success scenarios:**
+1. User opens a recipe.
+2. System displays the default serving size.
+3. User enters a new desired serving size.
+4. System calculates scaling factor.
+5. System recalculates ingredient quantities proportionally.
+6. System updates displayed ingredient list.
+
+**Extension:**
+3a. User enters invalid input (zero, negative, non-numeric).
+    - System prompts user to enter a valid number.
+
+**Special Requirements:**
+Scaling calculations must maintain mathematical accuracy and consistent formatting.
+
+----------------------------------------------------------------------------------------
+## UC-15 Customize Recipe Ingredients Within Cooking Flow (Vanshika)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: wants flexibility to modify ingredients during cooking.
+System: must update recipe data dynamically.
+
+**Preconditions:**
+- Recipe exists.
+- User is viewing the recipe (guided or standard view).
+
+**Main success scenarios:**
+1. User opens a recipe.
+2. User selects an ingredient to modify.
+3. User edits quantity, removes ingredient, or adds a new ingredient.
+4. System validates the modification.
+5. System updates ingredient list.
+6. System updates related measurements or calculations if necessary.
+7. User continues cooking with updated version.
+
+**Extension:**
+4a. Modification conflicts with dietary restrictions.
+    - System warns the user but allows override.
+
+3a. User cancels modification.
+    - System retains original recipe data.
+
+**Special Requirements:**
+Modifications must not permanently alter the original stored recipe unless explicitly saved.
+
+----------------------------------------------------------------------------------------
+
+## UC-16 Track User Cooking History (Vanshika)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: wants to track completed recipes and modifications.
+System: must store historical cooking activity.
+
+**Preconditions:**
+- User is logged in. 
+- User has completed at least one recipe.
+
+**Main success scenarios:**
+1. User completes a recipe.
+2. System records the completion event.
+3. System stores associated data (date, modifications, ratings if provided).
+4. User navigates to the “Cooking History” section.
+5. System retrieves completed recipes.
+6. System displays them in chronological order.
+7. User selects a past recipe to review details.
+
+**Extension:**
+2a. User exits before marking completion.
+    - System prompts user to confirm completion.
+5a. No history exists.
+    - System displays a message indicating no completed recipes.
+
+**Special Requirements:**
+Cooking history data must be associated only with the authenticated user account.
+
+----------------------------------------------------------------------------------------

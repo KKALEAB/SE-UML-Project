@@ -129,7 +129,7 @@ User (Student / Beginner Cook)
 - UC-06 view recipe with steps, timers, nutritional info, and media
 - UC-07 share recipes via generated links
 - UC-08 convert units and standardize measurements across recipes
-- 
+
 ----------------------------------------------------------------------------------------
 
 ## UC-05 create, edit, and organize recipes with Metadata
@@ -262,5 +262,123 @@ Unit conversions must be accurate and applied uniformly across all ingredients a
 
 
 
+# Cooper Brown Use Cases
 
+- UC-09 Authenticate User Account
+- UC-10 Share Completed Meal Photos
+- UC-11 Rate and Comment on Recipes
+- UC-12 View Personalized Dashboard
 
+----------------------------------------------------------------------------------------
+
+## UC-9 Authenticate User Account (Cooper)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+- User: Sign into account more securely or verify they are who they say before doing something significant with the account (e.g deleting account)
+- System: Checks that the user is who they say they are
+
+**Preconditions:**
+- The account being signed into exists
+
+**Main success scenarios:**
+1. User submits their information correctly
+2. System generates 4 digit code
+3. System sends the 4 digit code to a predetermined secure channel
+4. System prompts the User to input a 4 digit code
+5. User inputs code
+6. System checks code against generated code and verifies before proceeding
+
+**Extension:**
+3a. Authentication channels
+  - Can be predetermined to be a phone number or email address owned by the account owner
+6a. Incorrect codes reject the action being taken
+
+**Special Requirements:**
+- N/A
+
+----------------------------------------------------------------------------------------
+
+## UC-10 Share Completed Meal Photos (Cooper)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+- User: Share pictures of their meal after it is cooked
+- System: Have space to post completed meal pictures
+
+**Preconditions:**
+- There is a recipe to commit on
+
+**Main success scenarios:**
+1. Users clicks the share photo option under a recipe
+2. The system prompts the user to take a picture to submit
+3. The system uploads the picture into the gallery for the recipe
+4. System updates gallery to show the new image at the front of the viewable section
+
+**Extension:**
+2a. Pictures
+  - Can be done within app by accessing camera or gallery
+3a. Show username on picture
+  - Adds watermark with username of person posting the image on bottom
+**Special Requirements:**
+- Identify who posted the images and be able to see what the results look like for others
+
+----------------------------------------------------------------------------------------
+
+## UC-11 Rating and commenting system on recipes (Cooper)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+- User: ability to rate recipes and leave comments alongside the rating
+- System: compile the ratings and displays the ratings
+
+**Preconditions:**
+- The User is signed in
+- The recipe exists
+
+**Main success scenarios:**
+1. User clicks the "rate" button on the recipe
+2. User is prompted to give a 1-5 star rating to the recipe and type a comment
+3. system adds the star rating too the recipe's list of star ratings
+4. the system adds the comment with a display of the star rating too the comments section
+
+**Extension:**
+3a. No preexisting ratings 
+  - If no star rating list exists, one for the recipe is created
+
+**Special Requirements:**
+- display total rating for the recipe based on these ratings
+
+----------------------------------------------------------------------------------------
+
+## UC-12 View personalized dashboard (Cooper)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: Have an interactable space to navigate in
+System: Present an interactable space for the User to navigate within
+
+**Preconditions:**
+- User has filled in the account information
+- Other functions exist properly
+
+**Main success scenarios:**
+1. User logs into their account
+2. Buttons and UI corresponding too other elements are generated and formatted
+3. User selects option
+4. System routes too the applicable use case for that option
+**Extension:**
+2a. Specifications
+  - The specifications of such depend on the other use cases
+  - Options include but are not limited too Recipe search, profile management, and recipe creation
+**Special Requirements:**
+
+----------------------------------------------------------------------------------------

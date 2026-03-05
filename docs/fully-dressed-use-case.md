@@ -666,4 +666,112 @@ The ranking logic should factor in the user's stored preferences and dietary pro
 
 
 ----------------------------------------------------------------------------------------
+## UC-21 Generate Dynamic Shopping List(Isaac)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: wants an organized list of ingredients to buy based on selected recipes.
+System: must accurately aggregate and calculate total ingredient quantities.
+
+**Preconditions:**
+User has selected recipes for upcoming meals.
+Recipes contain structured ingredient data.
+
+**Main success scenarios:**
+User selects recipes for meals.
+User triggers shopping list generation.
+System aggregates all required ingredients.
+System consolidates duplicate ingredients.
+System displays the dynamic shopping list.
+
+**Extension:**
+3a. Recipe has missing ingredient quantity data. 
+- System lists ingredient separately for manual verification.
+
+**Special Requirements:**
+Shopping list must update dynamically in real-time when recipes are added or removed.
+
+----------------------------------------------------------------------------------------
+## UC-22 Substitute Ingredients in Recipe (Isaac)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: wants to replace an ingredient. 
+System: must calculate the correct quantity for the substitute.
+
+**Preconditions:**
+User is viewing a recipe.
+Substitution logic data exists in the database.
+
+**Main success scenarios:**
+User selects an ingredient to substitute.
+System displays a list of valid substitutions.
+User selects a substitute.
+System applies logic to calculate the correct quantity.
+System updates the recipe with the new ingredient and quantity.
+
+**Extension:**
+2a. No valid substitutions exist. 
+- System informs user that no verified substitutions are available.
+
+**Special Requirements:**
+Accuracy must ensure substitution logic and quantity adjustments work chemically and culinarily.
+
+----------------------------------------------------------------------------------------
+## UC-23 Estimate Recipe Cost(Isaac)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: wants to know the approximate cost of a recipe. 
+System: must calculate pricing using predefined store data.
+
+**Preconditions:**
+Predefined store pricing data for ingredients is available.
+
+**Main success scenarios:**
+User opens a recipe.
+System retrieves predefined store pricing data for ingredients.
+System calculates total estimated cost.
+System displays the estimated total cost.
+
+**Extension:**
+2a. Pricing data is missing for an ingredient. 
+- System calculates partial cost and flags unpriced items.
+
+**Special Requirements:**
+Accuracy must rely on accurately verified pricing data for reliable cost estimates.
+
+----------------------------------------------------------------------------------------
+## UC-24 Suggest Ingredient and Equipment Alternatives (Isaac)
+
+**Primary actor:**
+User (student/beginner cook)
+
+**Stakeholders and interests:**
+User: needs workarounds for missing tools or ingredients. 
+System: must provide viable alternatives using constraint optimization.
+
+**Preconditions:**
+User is viewing a recipe.
+Equipment and alternative mapping constraints exist in the database.
+
+**Main success scenarios:**
+User indicates a missing piece of equipment or ingredient.
+System runs constraint optimization against recipe requirements.
+System identifies a feasible alternative technique or item.
+System displays the alternative suggestions.
+
+**Extension:**
+3a. No feasible alternatives can be found. 
+- System advises that the item is strictly required.
+
+**Special Requirements:**
+Accuracy must ensure constraint optimization logic does not result in failed recipes.
+
 

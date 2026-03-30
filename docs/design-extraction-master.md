@@ -31,6 +31,41 @@ Member Sections
 * BudgetConstraint
 * recipeFilter (shared class)
 
+#### Candidate Attributes
+
+# user
+* userID
+* name
+* email
+
+# UserProfile
+* profileID
+* dietaryPreferences
+* allergies
+
+# kitchenEquipment
+* equipmentID
+* equipmentName
+* equipmentType
+* isCustom
+
+# BudgetConstraint
+* budgetID
+* maxBudget
+
+# RecipeFilter
+
+* filterID
+* dietarypreferences
+* allergies
+* availableEquipment
+* budgetLimit
+
+# Recipe
+* recipeID
+* title
+
+
 ## notes
 * user profile includes user's dietary preference, budget, and allergies.
 * kitchenEquipment is connected to UserProfile.
@@ -44,12 +79,16 @@ Member Sections
 ### Jenny
 _To be filled_
 
+#### Candidate Attributes
+_To be filled_
 ## notes
 
 -------------------------------------------------------------------------
 ### Cooper
 _To be filled_
 
+#### Candidate Attributes
+_To be filled_
 ## notes
 
 -------------------------------------------------------------------------
@@ -57,6 +96,8 @@ _To be filled_
 ### Vanshika
 _To be filled_
 
+#### Candidate Attributes
+_To be filled_
 ## notes
 
 -------------------------------------------------------------------------
@@ -64,6 +105,8 @@ _To be filled_
 ### Ishita
 _To be filled_
 
+#### Candidate Attributes
+_To be filled_
 ## notes
 
 -------------------------------------------------------------------------
@@ -71,6 +114,8 @@ _To be filled_
 ### Isaac
 _To be filled_
 
+#### Candidate Attributes
+_To be filled_
 ## notes
 
 -------------------------------------------------------------------------

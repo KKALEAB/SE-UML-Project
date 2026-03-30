@@ -31,29 +31,29 @@ Member Sections
 * BudgetConstraint
 * recipeFilter (shared class)
 
-#### Candidate Attributes
+# Candidate Attributes
 
-# user
+### user
 * userID
 * name
 * email
 
-# UserProfile
+### UserProfile
 * profileID
 * dietaryPreferences
 * allergies
 
-# kitchenEquipment
+### kitchenEquipment
 * equipmentID
 * equipmentName
 * equipmentType
 * isCustom
 
-# BudgetConstraint
+### BudgetConstraint
 * budgetID
 * maxBudget
 
-# RecipeFilter
+### RecipeFilter
 
 * filterID
 * dietarypreferences
@@ -61,7 +61,7 @@ Member Sections
 * availableEquipment
 * budgetLimit
 
-# Recipe
+### Recipe
 * recipeID
 * title
 

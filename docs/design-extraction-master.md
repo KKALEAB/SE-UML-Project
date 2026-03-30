@@ -23,13 +23,13 @@ Member Sections
 -------------------------------------------------------------------------
 
 ### Kaleab
-canidate Classes
-. user (shared)
-. userprofile (shared)
-. Recipe (shared)
-. KitchenEquipment
-. BudgetConstraint
-. recipeFilter (shared class)
+# canidate Classes
+* user (shared)
+* userprofile (shared)
+* Recipe (shared)
+* KitchenEquipment
+* BudgetConstraint
+* recipeFilter (shared class)
 
 ## notes
 * user profile includes user's dietary preference, budget, and allergies.

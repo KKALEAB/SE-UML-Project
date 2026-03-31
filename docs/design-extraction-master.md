@@ -1,13 +1,18 @@
 # FirstPan Design Model Extraction
-Source artifacts:
+
+## Source Artifacts
 - Fully Dressed Use Cases
 - Supplementary Specifications
 - Conceptual Diagram
 
+---
+
 ## Team Extraction Rules
 - If a concept may overlap with another teammate’s concept, mark it as (shared class)
 
-## Shared Candidate Classes & possibly shared Classes
+---
+
+## Shared Candidate Classes & Possibly Shared Classes
 - User
 - UserProfile
 - Recipe
@@ -16,127 +21,141 @@ Source artifacts:
 - Review
 - CookingSession
 - GroceryList (Possibly shared)
-## Add methods only if supported by use cases
 
+---
 
-#####Member Sections
--------------------------------------------------------------------------
+## Add Methods Only If Supported by Use Cases
 
-#### Kaleab
+---
 
-### canidate Classes
-* user (shared)
-* userprofile (shared)
-* Recipe (shared)
-* KitchenEquipment
-* BudgetConstraint
-* recipeFilter (shared class)
+# Member Sections
+
+---
+
+## Kaleab
+
+### Candidate Classes
+- user (shared)
+- userprofile (shared)
+- Recipe (shared)
+- KitchenEquipment
+- BudgetConstraint
+- recipeFilter (shared class)
 
 ### Candidate Attributes
 
-# user
-* userID
-* name
-* email
+#### User
+- userID
+- name
+- email
 
-# UserProfile
-* profileID
-* dietaryPreferences
-* allergies
+#### UserProfile
+- profileID
+- dietaryPreferences
+- allergies
 
-# kitchenEquipment
-* equipmentID
-* equipmentName
-* equipmentType
-* isCustom
+#### KitchenEquipment
+- equipmentID
+- equipmentName
+- equipmentType
+- isCustom
 
-# BudgetConstraint
-* budgetID
-* maxBudget
+#### BudgetConstraint
+- budgetID
+- maxBudget
 
-# RecipeFilter
+#### RecipeFilter
+- filterID
+- dietarypreferences
+- allergies
+- availableEquipment
+- budgetLimit
 
-* filterID
-* dietarypreferences
-* allergies
-* availableEquipment
-* budgetLimit
+#### Recipe
+- recipeID
+- title
 
-# Recipe
-* recipeID
-* title
+### Notes
+- user profile includes user's dietary preference, budget, and allergies
+- kitchenEquipment is connected to UserProfile
+- RecipeFilter uses UserProfile data to filter recipes
+- BudgetConstraint alters filtering and grocery list generation
+- RecipeFilter may overlap with the search filter/system handled by other team members
 
+---
 
-## notes
-* user profile includes user's dietary preference, budget, and allergies.
-* kitchenEquipment is connected to UserProfile.
-* RecipeFilter uses UserProfile data to filter recipes.
-* BudgetConstraint alters filtering and grocery list generation.
-* RecipeFilter may overlap with the search filter/system handled by      other team members.
+## Jenny
 
-
--------------------------------------------------------------------------
-
-### Jenny
+### Candidate Classes
 _To be filled_
 
-#### Candidate Attributes
-_To be filled_
-## notes
-
--------------------------------------------------------------------------
-### Cooper
+### Candidate Attributes
 _To be filled_
 
-#### Candidate Attributes
-_To be filled_
-## notes
+### Notes
 
--------------------------------------------------------------------------
+---
 
-### Vanshika
-_To be filled_
+## Cooper
 
-#### Candidate Attributes
-_To be filled_
-## notes
-
--------------------------------------------------------------------------
-
-### Ishita
+### Candidate Classes
 _To be filled_
 
-#### Candidate Attributes
-_To be filled_
-## notes
-
--------------------------------------------------------------------------
-
-### Isaac
+### Candidate Attributes
 _To be filled_
 
-#### Candidate Attributes
+### Notes
+
+---
+
+## Vanshika
+
+### Candidate Classes
 _To be filled_
-## notes
 
--------------------------------------------------------------------------
+### Candidate Attributes
+_To be filled_
 
-#### Merge Review Notes
-- Make sure not to create a new class if a shared class already covers the same meaning
+### Notes
 
-### shared classes that shoud stay stingle
+---
+
+## Ishita
+
+### Candidate Classes
+_To be filled_
+
+### Candidate Attributes
+_To be filled_
+
+### Notes
+
+---
+
+## Isaac
+
+### Candidate Classes
+_To be filled_
+
+### Candidate Attributes
+_To be filled_
+
+### Notes
+
+---
+
+## Merge Review Notes
+
+### Shared Classes That Should Stay Single
 - user
 - userprofile
 - recipe
 - Ingredient
 - kitchenEquipment
 
-### Concept that may merge later
-- BudgetConstraint ->> UserProfile
-- RecipeFilter ->> UserProfile
-- GroceryList ->> shoppinglist
-- CookingSession ->> CookingHistory
+### Concepts That May Merge Later
+- BudgetConstraint → UserProfile
+- RecipeFilter → UserProfile
+- GroceryList → shoppinglist
+- CookingSession → CookingHistory
 - Review may stay separate but must connect to user and recipe
-
-
--------------------------------------------------------------------------

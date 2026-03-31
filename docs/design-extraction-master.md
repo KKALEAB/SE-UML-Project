@@ -19,11 +19,12 @@ Source artifacts:
 ## Add methods only if supported by use cases
 
 
-Member Sections
+#####Member Sections
 -------------------------------------------------------------------------
 
-### Kaleab
-# canidate Classes
+#### Kaleab
+
+### canidate Classes
 * user (shared)
 * userprofile (shared)
 * Recipe (shared)
@@ -31,29 +32,29 @@ Member Sections
 * BudgetConstraint
 * recipeFilter (shared class)
 
-# Candidate Attributes
+### Candidate Attributes
 
-### user
+# user
 * userID
 * name
 * email
 
-### UserProfile
+# UserProfile
 * profileID
 * dietaryPreferences
 * allergies
 
-### kitchenEquipment
+# kitchenEquipment
 * equipmentID
 * equipmentName
 * equipmentType
 * isCustom
 
-### BudgetConstraint
+# BudgetConstraint
 * budgetID
 * maxBudget
 
-### RecipeFilter
+# RecipeFilter
 
 * filterID
 * dietarypreferences
@@ -61,7 +62,7 @@ Member Sections
 * availableEquipment
 * budgetLimit
 
-### Recipe
+# Recipe
 * recipeID
 * title
 

@@ -24,7 +24,8 @@
 
 ---
 
-## Add Methods Only If Supported by Use Cases
+## Method Constraint
+- Add methods only if supported by use cases
 
 ---
 
@@ -41,6 +42,8 @@
 - KitchenEquipment
 - BudgetConstraint
 - recipeFilter (shared class)
+
+---
 
 ### Candidate Attributes
 
@@ -74,6 +77,18 @@
 #### Recipe
 - recipeID
 - title
+
+---
+
+### Candidate Relationships
+- User ->> UserProfile (1..1)
+- UserProfile ->> KitchenEquipment (1..*)
+- UserProfile ->> BudgetConstraint (1..1)
+- UserProfile ->> RecipeFilter (1..1)
+- RecipeFilter ->> Recipe (*..*)
+- Recipe ->> KitchenEquipment (*..*)
+
+---
 
 ### Notes
 - user profile includes user's dietary preference, budget, and allergies
